@@ -25,7 +25,7 @@ date || credit || debit || balance
 
 ## My approach   
 
-Having decided to use JavaScript to complete the task (as opposed to Ruby, the only other programming language I know), I have decided to design the app to run in the browser console. Although it would be possible to create command-line app via node, I think that this would add extra layers of complexity that the relatively straightforward requirements of the task do not demand. I feel that Jasmine is a good choice for my testing framework, given that it also runs in the browser, does not require a DOM and is extremely simple to set up. 
+Having decided to use JavaScript to complete the task (as opposed to Ruby, the only other programming language I know), I have decided to design the app to run in the browser console. Although it would be possible to create command-line app via node, I think that this would add extra layers of complexity that the relatively straightforward requirements of the task do not demand. I feel that Jest is a good choice for my testing framework, given that it has an in-built code coverage tool, which will reduce set up time. 
 
 ## Planning  
 
