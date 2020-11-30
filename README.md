@@ -97,6 +97,6 @@ I would like to be able to print out a statement showing my transaction history.
 |----------|----------|  
 | [depositDouble] | date || credit || debit || balance
 12/01/2012 || 10.00 || || 10.00 |   
-| [depositDouble, withdrawalDouble] | date || credit || debit || balance
+| [depositDouble, withdrawalDouble] | date || credit || debit || balance   
 13/01/2012 ||  || 10.00 || 0.00 |   
 12/01/2012 || 10.00 || || 10.00 |
