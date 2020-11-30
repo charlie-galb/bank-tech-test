@@ -24,3 +24,27 @@ date || credit || debit || balance
 ```  
 
 ## My approach   
+
+Having decided to use JavaScript to complete the task (as opposed to Ruby, the only other programming language I know), I have decided to design the app to run in the browser console. Although it would be possible to create command-line app via node, I think that this would add extra layers of complexity that the relatively straightforward requirements of the task do not demand. I feel that Jasmine is a good choice for my testing framework, given that it also runs in the browser, does not require a DOM and is extremely simple to set up. 
+
+## Planning  
+
+### User Stories  
+
+```
+As a user,  
+So that I can save my hard-earned money,  
+I would like to be able to make deposits into my account.  
+```
+
+```
+As a user,  
+So that I can use my hard-earned money to make cash-purchases,  
+I would like to be able to withdraw it from my account.  
+```
+
+```
+As a user,  
+So that I can track my spending,  
+I would like to be able to print out a statement showing my transaction history.  
+```
