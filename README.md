@@ -51,7 +51,7 @@ I would like to be able to print out a statement showing my transaction history.
 
 ### Class Relationship Diagram  
 
-![Class Relationship Diagram][https://github.com/charlie-galb/bank-tech-test/blob/main/class-relationship-diagram-bank-test.jpeg]
+![Class Relationship Diagram][./class-relationship-diagram-bank-test.jpeg]
 
 ### Tests  
 
