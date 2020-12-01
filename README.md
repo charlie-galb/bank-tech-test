@@ -32,8 +32,6 @@ Having decided to use JavaScript to complete the task (as opposed to Ruby, the o
 - Jest  
 - ESLint
 
-## Planning  
-
 ### User Stories  
 
 ```
@@ -53,6 +51,15 @@ As a user,
 So that I can track my spending,  
 I would like to be able to print out a statement showing my transaction history.  
 ```
+
+### Edge Cases  
+
+| *Case* | *Outcome |
+| ------- | -------- |
+| Negative account balance when user tries to withdraw | Raises error if withdrawal would take balance to below overdraft limit |
+| Negative value passed to deposit() | Raises error |
+| Negative value passed to deposit() | Raises error |
+
 
 ### Class Relationship Diagram  
 
