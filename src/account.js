@@ -7,6 +7,10 @@ class Account{
     getCurrentBalance(){
         return this.currentBalance;
     };
+
+    makeDeposit(amount){
+        this.currentBalance = this.currentBalance + amount;
+    }
 };
 
 module.exports = Account;
