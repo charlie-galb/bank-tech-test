@@ -20,4 +20,11 @@ describe("Withdrawal", () => {
             global.Date.now = realNow
         });
     });
+
+    describe("getBalanceAfterTransaction", () => {
+        test("When whole numbers are used, it should return the account balance minus the amount debited", () => {
+            let withdrawal = new Withdrawal(500, 10)
+            expect(withdrawal.getBalanceAfterTransaction()).toEqual(490)
+        });
+    });
 })

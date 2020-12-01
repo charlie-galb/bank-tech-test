@@ -4,6 +4,7 @@ class Withdrawal{
         this.balanceBeforeTransaction = balanceBeforeTransaction;
         this.debit = amount;
         this.transactionDate = Date.now();
+        this.balanceAfterTransaction = this.balanceBeforeTransaction - amount;
     }
 
     getDebit(){
@@ -13,6 +14,10 @@ class Withdrawal{
     getTransactionDate(){
         return this.transactionDate.toString();
     };
+
+    getBalanceAfterTransaction(){
+        return this.balanceAfterTransaction;
+    }
 };
 
 module.exports = Withdrawal;
