@@ -60,9 +60,7 @@ I would like to be able to print out a statement showing my transaction history.
 
 ### Tests  
 
-**Transaction**  
-
-*Deposit*
+**Deposit**
 
 | Input  || Output |  
 |----------|----------|  
@@ -71,7 +69,7 @@ I would like to be able to print out a statement showing my transaction history.
 | 65, 3.79 | 68.79 |   
 | 37, 0 | "Please enter an amount larger than 0" |  
 
-*Withdrawal*
+**Withdrawal**
 
 | Input  || Output |  
 |----------|----------|  
