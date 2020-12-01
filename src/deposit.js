@@ -6,7 +6,7 @@ class Deposit{
     };
 
     getCredit(){
-        if (this.type = "deposit") return this.amount;
+        return this.amount;
     };
 
     getBalanceAfterTransaction(){
