@@ -1,5 +1,3 @@
-const { getBalanceAfterTransaction } = require("../__mocks__/deposit");
-
 function printTransaction(transaction){
     if (transaction.getCredit !== undefined) {
         return `${transaction.getTransactionDate()}` + " || "
