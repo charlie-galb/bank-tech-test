@@ -80,9 +80,9 @@ I would like to be able to print out a statement showing my transaction history.
 
 | Input  || Output |  
 |----------|----------|  
-| 500, 10 | 510 |   
+| 500, 10 | 490 |   
 |-10, -5 | -15 |   
-| 65, 3.79 | 68.79 |   
+| 65, 3.79 | 61.21 |   
 | 37, 0 | "Please enter an amount larger than 0" |
 
 **Account**  
