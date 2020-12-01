@@ -13,7 +13,11 @@ describe("getBalanceAfterTransaction", () => {
         expect(deposit.getBalanceAfterTransaction()).toEqual(510)
     });
     test("When decimals are used, it should return the account balance plus the amount credited", () => {
-        deposit = new Deposit(49, 9.33)
-        expect(deposit.getBalanceAfterTransaction()).toEqual(58.33)
+        deposit = new Deposit(65, 3.79)
+        expect(deposit.getBalanceAfterTransaction()).toEqual(68.79)
+    });
+    test("When the initial balance is negative, it should return the account balance plus the amount credited", () => {
+        deposit = new Deposit(-10, 5)
+        expect(deposit.getBalanceAfterTransaction()).toEqual(-5)
     });
 });
