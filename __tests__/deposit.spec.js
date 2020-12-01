@@ -7,6 +7,16 @@ describe("getCredit", () => {
     });
 });
 
+describe("getTransactionDate", () => {
+    test("it should return the amount credited to the account by the deposit", () => {
+        const realNow = Date.now
+        global.Date.now = jest.fn(() => new Date('2019-04-07T10:20:30Z'))
+        deposit = new Deposit(500, 10)
+        expect(deposit.getTransactionDate()).toEqual( "Sun Apr 07 2019 11:20:30 GMT+0100 (British Summer Time)")
+        global.Date.now = realNow
+    });
+});
+
 describe("getBalanceAfterTransaction", () => {
     test("When whole numbers are used, it should return the account balance plus the amount credited", () => {
         deposit = new Deposit(500, 10)
