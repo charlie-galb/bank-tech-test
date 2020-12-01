@@ -1,4 +1,5 @@
 const Deposit = require("./deposit");
+const Withdrawal = require("./withdrawal");
 
 class Account{
 
@@ -21,8 +22,18 @@ class Account{
         this.currentBalance = this.currentBalance + amount;
     }
 
+    withdraw(amount){
+        let withdrawal = this._makeNewWithdrawal(this.currentBalance, amount);
+       this._pushtransaction(withdrawal);
+        this.currentBalance = this.currentBalance - amount;
+    }
+
     _makeNewDeposit(){
         return new Deposit;
+    }
+
+    _makeNewWithdrawal(){
+        return new Withdrawal;
     }
 
     _pushtransaction(transaction){
