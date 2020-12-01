@@ -28,8 +28,8 @@ class Account{
         this.currentBalance = this.currentBalance - amount;
     }
 
-    _makeNewDeposit(){
-        return new Deposit;
+    _makeNewDeposit(currentBalance, amount){
+        return new Deposit(currentBalance, amount);
     }
 
     _makeNewWithdrawal(){
