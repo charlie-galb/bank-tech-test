@@ -27,4 +27,23 @@ describe("Account", () => {
             expect(account.getTransactionHistory()[0]).toEqual(mockDeposit)
         })
     })
+
+    describe("withdrawal", () => {
+        test("it alters the currentBalance according to the amount debited", () => {
+            let account = new Account;
+            expect(account.getCurrentBalance()).toEqual(0)
+            account.withdraw(10)
+            expect(account.getCurrentBalance()).toEqual(-10)
+        })
+        test("it creates a new Withdrawal and pushes it to the transactionHistory array", () => {
+            let account = new Account;
+            const mockWithdrawalMaker = jest.spyOn(account, '_makeNewWithdrawal');
+            const mockWithdrawal = {}
+            mockWithdrawalMaker.mockReturnValue(mockWithdrawal)
+            account.withdraw(10)
+            expect(mockWithdrawalMaker).toHaveBeenCalledWith(0, 10)
+            expect(account.getTransactionHistory().length).toEqual(1)
+            expect(account.getTransactionHistory()[0]).toEqual(mockWithdrawal)
+        })
+    })
 })
