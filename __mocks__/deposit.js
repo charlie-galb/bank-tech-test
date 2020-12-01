@@ -11,8 +11,7 @@ function getBalanceAfterTransaction(){
 };
 
 function getTransactionDate(){
-    let cannedDate = new Date('2019-04-07T10:20:30Z');
-    return cannedDate.toString();
+    return "04/07/2019";
 }
 
 depositObject.getCredit = getCredit;
