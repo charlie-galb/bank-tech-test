@@ -8,8 +8,12 @@ describe("getCredit", () => {
 });
 
 describe("getBalanceAfterTransaction", () => {
-    test("it should return the account balance plus the amount credited", () => {
+    test("When whole numbers are used, it should return the account balance plus the amount credited", () => {
         deposit = new Deposit(500, 10)
         expect(deposit.getBalanceAfterTransaction()).toEqual(510)
+    });
+    test("When decimals are used, it should return the account balance plus the amount credited", () => {
+        deposit = new Deposit(49, 9.33)
+        expect(deposit.getBalanceAfterTransaction()).toEqual(58.33)
     });
 });
