@@ -7,11 +7,11 @@ class Deposit{
     };
 
     getCredit(){
-        return this.amount.toFixed(2);
+        return this.amount;
     };
 
     getBalanceAfterTransaction(){
-        return this.balanceAfterTransaction.toFixed(2);
+        return this.balanceAfterTransaction;
     };
 
     getTransactionDate(){
