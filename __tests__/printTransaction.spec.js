@@ -6,3 +6,4 @@ describe("printStatement", () => {
         expect(printTransaction(depositObject)).toEqual("04/07/2019 || 10.50 || || 10.50")
     })
 })
+
