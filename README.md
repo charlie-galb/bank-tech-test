@@ -23,6 +23,16 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00  
 ```  
 
+## How to run the app    
+
+1. Run the node repl in the root directory with `node`
+2. Load index.js with `.load index.js`  
+3. To open an account: `myAccount = new Account`  
+4. To make a deposit: `myAccount.deposit(10)`
+5. To make a withdrawal: `myAccount.withdraw(5)`  
+6. To check your balance: `myAccount.getCurrentBalance()`  
+7. To print a full statement: `printStatement(myAccount.transactionHistory)`
+
 ## My approach   
 
 Having decided to use JavaScript to complete the task (as opposed to Ruby, the only other programming language I know), I have decided to design the app to run in the browser console. Although it would be possible to create command-line app via node, I think that this would add extra layers of complexity that the relatively straightforward requirements of the task do not demand. I feel that Jest is a good choice for my testing framework, given that it has an in-built code coverage tool, which will reduce set up time. I aim to use ESLint as a linter in order to ensure code quality.
@@ -87,7 +97,9 @@ I would like to be able to print out a statement showing my transaction history.
 
 **Account**  
 
-*Print Statement*
+*deposit*  
+
+**Printer**
 
 `withdrawalDouble = {
     date: 13/01/2012,
