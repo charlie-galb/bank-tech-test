@@ -1,6 +1,3 @@
-const Deposit = require("./deposit");
-const Withdrawal = require("./withdrawal");
-
 class Account{
 
     constructor(){
