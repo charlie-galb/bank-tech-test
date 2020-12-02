@@ -7,8 +7,9 @@ function printStatement(transactionArray){
     for(let i = 0; i < transactionArray.length; i++) {
        transactions += printTransaction(transactionArray[i])
     }
-
-    return heading + transactions
+    let statement = heading + transactions;
+    console.log(statement);
+    return statement;
 }
 
 module.exports = printStatement;
