@@ -35,12 +35,14 @@ date || credit || debit || balance
 
 ## My approach   
 
-Having decided to use JavaScript to complete the task (as opposed to Ruby, the only other programming language I know), I have decided to design the app to run in the browser console. Although it would be possible to create command-line app via node, I think that this would add extra layers of complexity that the relatively straightforward requirements of the task do not demand. I feel that Jest is a good choice for my testing framework, given that it has an in-built code coverage tool, which will reduce set up time. I aim to use ESLint as a linter in order to ensure code quality.
+Having decided to use JavaScript to complete the task (as opposed to Ruby, the only other programming language I know), I initially elected to design the app to run in the browser console. However, I ran into some problems due to the module syntax not being recognised by the browser. I then decided to reconfigure the app to run in Node's REPL. I decided to use Jest for testing, given that it has an in-built code coverage tool, which reduced set up time. I used ESLint as a linter in order to ensure code quality.
 
 ### List of Dependencies  
 
 - Jest  
 - ESLint
+
+### Test Coverage
 
 ### User Stories  
 
@@ -66,14 +68,14 @@ I would like to be able to print out a statement showing my transaction history.
 
 | *Case* | *Outcome |
 | ------- | -------- |
-| Negative account balance when user tries to withdraw | Raises error if withdrawal would take balance to below overdraft limit |
-| Negative value passed to deposit() | Raises error |
-| Negative value passed to deposit() | Raises error |
+| Withdrawal would take user's balance below 0 | Raises error |
+| Negative value or 0 passed to deposit() | Raises error |
+| Negative value or 0 passed to withdraw() | Raises error |  
 
 
 ### Class Relationship Diagram  
 
-![Class Relationship Diagram][https://github.com/charlie-galb/bank-tech-test/blob/main/class-relationship-diagram-bank-test.jpeg]
+![Class Relationship Diagram][https://github.com/charlie-galb/bank-tech-test/blob/main/bank-class-diagram.jpeg]
 
 ### Tests  
 
@@ -122,3 +124,5 @@ I would like to be able to print out a statement showing my transaction history.
 | [depositDouble, withdrawalDouble] | date || credit || debit || balance   
 13/01/2012 ||  || 10.00 || 0.00 |   
 12/01/2012 || 10.00 || || 10.00 |
+
+![Test coverage][https://github.com/charlie-galb/bank-tech-test/blob/main/test_coverage.png]
