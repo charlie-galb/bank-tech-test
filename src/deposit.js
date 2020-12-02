@@ -15,7 +15,7 @@ class Deposit{
     }
 
     getTransactionDate(){
-        return this.transactionDate.toString();
+        return new Date(this.transactionDate).toLocaleString().split(',')[0];
     }
 }
 
