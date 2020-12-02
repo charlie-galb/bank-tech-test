@@ -3,11 +3,11 @@ class Account{
     constructor(){
         this.currentBalance = 0;
         this.transactionHistory = [];
-    };
+    }
 
     getCurrentBalance(){
         return this.currentBalance;
-    };
+    }
 
     getTransactionHistory(){
         return this.transactionHistory;
@@ -36,6 +36,6 @@ class Account{
     _pushtransaction(transaction){
         this.transactionHistory.push(transaction);
     }
-};
+}
 
 module.exports = Account;
