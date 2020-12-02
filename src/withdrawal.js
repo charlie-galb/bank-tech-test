@@ -9,15 +9,15 @@ class Withdrawal{
 
     getDebit(){
         return this.debit;
-    };
+    }
 
     getTransactionDate(){
         return this.transactionDate.toString();
-    };
+    }
 
     getBalanceAfterTransaction(){
         return this.balanceAfterTransaction;
     }
-};
+}
 
 module.exports = Withdrawal;
