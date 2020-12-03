@@ -11,16 +11,6 @@ describe("Withdrawal", () => {
         });
     });
 
-    describe("getTransactionDate", () => {
-        test("it should return the amount credited to the account by the deposit", () => {
-            const realNow = Date.now
-            global.Date.now = jest.fn(() => new Date(1606903524976))
-            let withdrawal = new Withdrawal(6, 3)
-            expect(withdrawal.getTransactionDate()).toEqual('02/12/2020')
-            global.Date.now = realNow
-        });
-    });
-
     describe("getBalanceAfterTransaction", () => {
         test("When whole numbers are used, it should return the account balance minus the amount debited", () => {
             let withdrawal = new Withdrawal(500, 10)
