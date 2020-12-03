@@ -4,14 +4,6 @@ describe("Account", () => {
 
     const account = new Account;
 
-    const mockDepositMaker = jest.spyOn(account, '_makeNewDeposit');
-    const mockDeposit = {};
-    mockDepositMaker.mockReturnValue(mockDeposit);
-
-    const mockWithdrawalMaker = jest.spyOn(account, '_makeNewWithdrawal');
-    const mockWithdrawal = {};
-    mockWithdrawalMaker.mockReturnValue(mockWithdrawal);
-
     describe("getCurrentBalance", () => {
         test("it returns the current balance of the account", () => {
             expect(account.getCurrentBalance()).toEqual(0)
@@ -22,12 +14,6 @@ describe("Account", () => {
         test("it alters the currentBalance according to the amount credited", () => {
             account.deposit(10)
             expect(account.getCurrentBalance()).toEqual(10)
-        })
-        test("it creates a new Deposit and pushes it to the transactionHistory array", () => {
-            account.deposit(10)
-            expect(mockDepositMaker).toHaveBeenCalledWith(10, 10)
-            expect(account.getTransactionHistory().length).toEqual(2)
-            expect(account.getTransactionHistory()[0]).toEqual(mockDeposit)
         })
         test("it raises an error if the amount is 0", () => {
             expect(() => {
@@ -43,15 +29,9 @@ describe("Account", () => {
 
     describe("withdrawal", () => {
         test("it alters the currentBalance according to the amount debited", () => {
-            expect(account.getCurrentBalance()).toEqual(20)
-            account.withdraw(10)
             expect(account.getCurrentBalance()).toEqual(10)
-        })
-        test("it creates a new Withdrawal and pushes it to the transactionHistory array", () => {
-            account.withdraw(10)
-            expect(mockWithdrawalMaker).toHaveBeenCalledWith(10, 10)
-            expect(account.getTransactionHistory().length).toEqual(4)
-            expect(account.getTransactionHistory()[3]).toEqual(mockWithdrawal)
+            account.withdraw(5)
+            expect(account.getCurrentBalance()).toEqual(5)
         })
         test("it raises an error if the amount is 0", () => {
             expect(() => {
