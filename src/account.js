@@ -1,3 +1,6 @@
+const Deposit = require("../src/deposit.js")
+const Withdrawal = require("../src/withdrawal.js")
+
 class Account{
 
     constructor(){
@@ -7,10 +10,6 @@ class Account{
 
     getCurrentBalance(){
         return this.currentBalance;
-    }
-
-    getTransactionHistory(){
-        return this.transactionHistory;
     }
 
     deposit(amount){
@@ -32,8 +31,8 @@ class Account{
         return new Deposit(currentBalance, amount);
     }
 
-    _makeNewWithdrawal(){
-        return new Withdrawal;
+    _makeNewWithdrawal(currentBalance, amount){
+        return new Withdrawal(currentBalance, amount);
     }
 
     _pushtransaction(transaction){
