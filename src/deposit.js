@@ -1,21 +1,12 @@
-class Deposit{
+const Transaction = require("./transaction.js")
+class Deposit extends Transaction{
     constructor(balanceBeforeTransaction, amount){
-        this.balanceBeforeTransaction = balanceBeforeTransaction;
-        this.amount = amount;
-        this.transactionDate = Date.now()
+        super(balanceBeforeTransaction, amount);
         this.balanceAfterTransaction = this.balanceBeforeTransaction + amount;
     }
 
     getCredit(){
         return this.amount;
-    }
-
-    getBalanceAfterTransaction(){
-        return this.balanceAfterTransaction;
-    }
-
-    getTransactionDate(){
-        return new Date(this.transactionDate).toLocaleString().split(',')[0];
     }
 }
 
