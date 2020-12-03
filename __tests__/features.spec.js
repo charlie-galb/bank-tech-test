@@ -13,7 +13,6 @@ describe("Feature test", () => {
         expect(account.getCurrentBalance()).toEqual(7.00)
         account.deposit(9.50)
         expect(account.getCurrentBalance()).toEqual(16.50)
-        console.log(account.getTransactionHistory())
         expect(printStatement(account.transactionHistory)).toEqual(
              "| date || credit || debit || balance\n03/12/2020 || 9.50 || || 16.50\n03/12/2020 || || 0.40 || 7.00\n03/12/2020 || || 2.10 || 7.40\n03/12/2020 || 9.50 || || 9.50\n"
              )
