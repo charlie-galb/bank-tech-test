@@ -1,6 +1,4 @@
 const printStatement = require("../src/printStatement.js")
-const depositObject = require("../__mocks__/deposit.js")
-const withdrawalObject = require("../__mocks__/withdrawal.js")
 
 const withdrawalMock = {
     getDebit: () => 10.5,
