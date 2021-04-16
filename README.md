@@ -42,8 +42,6 @@ Having decided to use JavaScript to complete the task (as opposed to Ruby, the o
 - Jest  
 - ESLint
 
-### Test Coverage
-
 ### User Stories  
 
 ```
@@ -64,19 +62,10 @@ So that I can track my spending,
 I would like to be able to print out a statement showing my transaction history.  
 ```
 
-### Edge Cases  
-
-| *Case* | *Outcome |
-| ------- | -------- |
-| Withdrawal would take user's balance below 0 | Raises error |
-| Negative value or 0 passed to deposit() | Raises error |
-| Negative value or 0 passed to withdraw() | Raises error |  
-
-
 ### Class Relationship Diagram  
 
-![Class Relationship Diagram][https://github.com/charlie-galb/bank-tech-test/blob/main/bank-class-diagram.jpeg]
+![Class Relationship Diagram](https://github.com/charlie-galb/bank-tech-test/blob/main/bank-class-diagram.jpeg)
 
 ### Test coverage  
 
-![Test coverage][https://github.com/charlie-galb/bank-tech-test/blob/main/test_coverage.png]
+![Test coverage](https://github.com/charlie-galb/bank-tech-test/blob/main/test_coverage.png)
