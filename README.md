@@ -77,52 +77,6 @@ I would like to be able to print out a statement showing my transaction history.
 
 ![Class Relationship Diagram][https://github.com/charlie-galb/bank-tech-test/blob/main/bank-class-diagram.jpeg]
 
-### Tests  
-
-**Deposit**
-
-| Input  || Output |  
-|----------|----------|  
-| 500, 10 | 510 |   
-|-10, 5 | -5 |   
-| 65, 3.79 | 68.79 |   
-| 37, 0 | "Please enter an amount larger than 0" |  
-
-**Withdrawal**
-
-| Input  || Output |  
-|----------|----------|  
-| 500, 10 | 490 |   
-|-10, -5 | -15 |   
-| 65, 3.79 | 61.21 |   
-| 37, 0 | "Please enter an amount larger than 0" |
-
-**Account**  
-
-*deposit*  
-
-**Printer**
-
-`withdrawalDouble = {
-    date: 13/01/2012,
-    credit: 0,
-    debit: 10.00
-    balanceAfterTransaction: 0.00
-}`  
-
-`depositDouble = {
-    date: 12/01/2012,
-    credit: 0,
-    debit: 10.00
-    balanceAfterTransaction: 10.00
-}`
-
-| Input  || Output |  
-|----------|----------|  
-| [depositDouble] | date || credit || debit || balance
-12/01/2012 || 10.00 || || 10.00 |   
-| [depositDouble, withdrawalDouble] | date || credit || debit || balance   
-13/01/2012 ||  || 10.00 || 0.00 |   
-12/01/2012 || 10.00 || || 10.00 |
+### Test coverage  
 
 ![Test coverage][https://github.com/charlie-galb/bank-tech-test/blob/main/test_coverage.png]
